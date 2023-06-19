@@ -1,3 +1,4 @@
-# tokyo-night_arch
+# Dotfiles
+Dotfiles for tokyo-night themed arch setup
 
-Hello World
+# Contents
