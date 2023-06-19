@@ -9,7 +9,7 @@ Dotfiles for tokyo-night themed arch setup
 - **Compositor:** [picom](https://github.com/ibhagwan/picom)
 - **Editor:** [neovim](https://github.com/neovim/neovim)
 - **Browser:** [firefox](https://www.mozilla.org/en-US/firefox)
-- **File Manager:** [thunar](https://github.com/xfce-mirror/thunar)
+- **File Manager:** [ranger](https://github.com/ranger/ranger)
 - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
 
 # Contents
