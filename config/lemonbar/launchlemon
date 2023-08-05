@@ -1,0 +1,6 @@
+#!/bin/bash
+# Launches an instance of lemonbar
+killall -q lemonbar
+killall -q lemonconfig
+
+./lemonconfig | lemonbar -p -g x16 -F "#FFA9B1D6" -B "#FF1A1B26" -o -4 -f "NotoSansMono"-10

@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+# Outputs a configuration for lemonbar
+
+Clock(){
+    DATE=$(date "+%d/%m/%y")
+    TIME=$(date "+%I:%M:%S")
+
+    echo -e -n "${DATE} ${TIME}"
+}
+
+Update(){
+    echo -e "%{l}Hello World %{r} $(Clock)"
+}
+
+while true; do
+    Update
+    sleep 0.1s
+done
