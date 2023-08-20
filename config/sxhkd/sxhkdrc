@@ -9,7 +9,7 @@ alt + Return
 
 # program launcher
 alt + e
-	dmenu_run -fn 'HackNerdFont' -nb '#1a1b26' -nf '#a9b1d6' -sb '#1a1b26' -sf '#a9b1d6'
+	dmenu_run -fn 'HackNerdFont-12' -nb '#1e1e2e' -nf '#585b70' -sb '#1e1e2e' -sf '#cdd6f4'
 
 # make sxhkd reload its configuration files:
 super + Escape

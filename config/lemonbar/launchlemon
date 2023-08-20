@@ -3,4 +3,4 @@
 killall -q lemonbar
 killall -q lemonconfig
 
-~/.config/lemonbar/lemonconfig | lemonbar -p -g x16 -F "#FFA9B1D6" -B "#FF1A1B26" -f "HackNerdFontMono"-12 -f "SourceHanSansJP"-12
+~/.config/lemonbar/lemonconfig | lemonbar -p -g x24+2 -F "#ffcdd6f4" -B "#ff1e1e2e" -f "HackNerdFont"-12 -f "SourceHanSansJP"-12
