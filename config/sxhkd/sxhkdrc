@@ -4,8 +4,8 @@
 
 # terminal emulator
 alt + Return
-#	kitty
-	urxvt
+	kitty
+#	urxvt
 
 # program launcher
 alt + e
