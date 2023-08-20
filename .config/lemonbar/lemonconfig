@@ -79,7 +79,7 @@ Sound(){
 }
 
 Update(){
-    echo -e "%{l}%{F-} $(Workspaces)          %{c}    %{r} $(Sound)  %{F"#f9e2af"}$(Battery)  $(Clock) "
+    echo -e "%{l}%{F-}           %{c}    %{r} $(Sound)  %{F"#f9e2af"}$(Battery)  $(Clock) "
 }
 
 while true; do
