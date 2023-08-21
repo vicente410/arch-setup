@@ -2,21 +2,34 @@
 # Outputs a configuration for lemonbar
 
 Workspaces() {
-    desktops=$(bspc query -D --names)
-    focused=$(bspc query -D --names -d focused)
+    desktops=$(bspc query -D)
+    focused=$(bspc query -D -d focused)
+
+    #desktops=$(echo $desktops | sed "s/$focused/%{F#f38ba8}$focused%{F-}/")
 
     for desktop in $desktops; do
         desktop=$(echo "$desktop")
         nodes=$(bspc query -N -d $desktop)
 
-        if [ ! -z "$nodes" ]; then
-            desktops=$(echo $desktops | sed "s/$desktop/%{F#ffff00}A%{F-}/")
-        fi
+        if [[ ! -z "$nodes" ]]
+	then
+            if [[ "$desktop" = "$focused" ]]
+	    then
+		desktops=$(echo $desktops | sed "s/$desktop/%{F#f38ba8}%{F-}/")
+	    else
+		desktops=$(echo $desktops | sed "s/$desktop//")
+	    fi
+	else 
+            if [[ "$desktop" = "$focused" ]]
+            then
+		desktops=$(echo $desktops | sed "s/$desktop/%{F#f38ba8}%{F-}/")
+	    else
+		desktops=$(echo $desktops | sed "s/$desktop//")
+	    fi
+	fi
     done
 
-    desktops=$(echo $desktops | sed "s/$focused/%{F#f38ba8}$focused%{F-}%{B-}/")
-
-    echo $desktops | sed "s/_/ /g"
+    echo $desktops
 }
 
 Battery() {
@@ -79,7 +92,7 @@ Sound(){
 }
 
 Update(){
-    echo -e "%{l}%{F-}           %{c}    %{r} $(Sound)  %{F"#f9e2af"}$(Battery)  $(Clock) "
+    echo -e "%{l}%{F-} $(Workspaces)%{c}    %{r} $(Sound)  %{F"#f9e2af"}$(Battery)  $(Clock) "
 }
 
 while true; do
