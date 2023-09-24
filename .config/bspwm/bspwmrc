@@ -24,5 +24,7 @@ bspc config active_border_color \#313244
 bspc config normal_border_color \#313244
 
 xrdb ~/.Xresources
+systemctl start NetworkManager.service
+
 
 ~/.config/lemonbar/launchlemon

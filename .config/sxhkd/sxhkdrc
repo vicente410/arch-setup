@@ -13,7 +13,7 @@ alt + e
 #	dmenu_run -fn 'HackNerdFont-12' -nb '#1e1e2e' -nf '#585b70' -sb '#1e1e2e' -sf '#cdd6f4'
 
 # make sxhkd reload its configuration files:
-super + Escape
+alt + Escape
 	pkill -USR1 -x sxhkd
 
 #
@@ -124,3 +124,21 @@ super + {Left,Down,Up,Right}
 
 alt + space
 	bspc node focused -t \~floating
+
+#Volume Control
+XF86AudioLowerVolume
+	amixer set Master 5%-
+XF86AudioRaiseVolume
+	amixer set Master 5%+
+XF86AudioMute
+        amixer set Master toggle
+
+#Brightness Control
+XF86MonBrightnessDown
+	echo 0 > /sys/class/backlight/amdgpu_bl1/brightness
+XF86MonBrightnessUp
+	echo 255 > /sys/class/backlight/amdgpu_bl1/brightness
+
+#Print Screen
+Print
+    flameshot gui
