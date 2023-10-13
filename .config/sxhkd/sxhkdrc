@@ -122,8 +122,11 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-alt + space
-	bspc node focused -t \~floating
+alt + {t,space,f}
+	bspc node -t {tiled,floating,fullscreen}
+
+#alt +f
+#	bspc node -t \~fullscreen
 
 #Volume Control
 XF86AudioLowerVolume

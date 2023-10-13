@@ -5,4 +5,4 @@ vim.opt.smarttab=True
 vim.opt.expandtab=True
 vim.opt.tabstop=8
 vim.opt.softtabstop=0
-
+vim.wo.relativenumber = true

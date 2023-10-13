@@ -15,14 +15,14 @@ Workspaces() {
 	then
             if [[ "$desktop" = "$focused" ]]
 	    then
-		desktops=$(echo $desktops | sed "s/$desktop/%{F#f38ba8}%{F-}/")
+		desktops=$(echo $desktops | sed "s/$desktop/%{F#89b4fa}%{F-}/")
 	    else
 		desktops=$(echo $desktops | sed "s/$desktop//")
 	    fi
 	else 
             if [[ "$desktop" = "$focused" ]]
             then
-		desktops=$(echo $desktops | sed "s/$desktop/%{F#f38ba8}%{F-}/")
+		desktops=$(echo $desktops | sed "s/$desktop/%{F#89b4fa}%{F-}/")
 	    else
 		desktops=$(echo $desktops | sed "s/$desktop//")
 	    fi
@@ -92,7 +92,11 @@ Sound(){
 }
 
 Update(){
-    echo -e "%{l}%{F-} $(Workspaces)%{c}    %{r}  $(Battery) $(Clock) "
+    echo -e "%{l}%{F-} $(Workspaces)%{c}  %{F#89b4fa}%{F-}  %{r}  $(Battery) $(Clock) "
+    #echo -e "%{l}%{F-} $(Workspaces)%{c}  %{F#f38ba8}%{F-}  %{r}  $(Battery) $(Clock) "
+    #echo -e "%{l}%{F-} $(Workspaces)%{c}  %{F#a6e3a1}%{F-}  %{r}  $(Battery) $(Clock) "
+    #echo -e "%{l}%{F-} $(Workspaces)%{c}  %{F#cba6f7}%{F-}  %{r}  $(Battery) $(Clock) "
+    #echo -e "%{l}%{F-} $(Workspaces)%{c}  %{F#74c7ec}%{F-}  %{r}  $(Battery) $(Clock) "
 }
 
 while true; do
