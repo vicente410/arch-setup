@@ -144,4 +144,5 @@ XF86MonBrightnessUp
 
 #Print Screen
 Print
-    flameshot gui
+    shotgun $(hacksaw -f "-i %i -g %g") - | xclip -t 'image/png' -selection clipboard
+    #flameshot gui
