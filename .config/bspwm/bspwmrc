@@ -1,5 +1,8 @@
-#! /bin/sh
+#! /bin/bash
 
+export _JAVA_AWT_WM_NONREPARENTING=1
+export DMENU_PATH="/home/${USER}/.local/bin"
+export SXHKD_SHELL=/bin/bash
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -26,5 +29,4 @@ bspc config normal_border_color \#313244
 xrdb ~/.Xresources
 systemctl start NetworkManager.service
 
-
-~/.config/lemonbar/launchlemon
+~/.config/lemonbar/launchlemon &

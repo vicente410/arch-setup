@@ -4,13 +4,14 @@
 
 # terminal emulator
 alt + Return
-	kitty
+	st
 #	urxvt
 
 # program launcher
 alt + e
+	dmenu_run -fn 'HackNerdFont-12' -nb '#1e1e2e' -nf '#585b70' -sb '#1e1e2e' -sf '#cdd6f4' -h '24'
+alt + shift + e
 	rofi -show drun
-#	dmenu_run -fn 'HackNerdFont-12' -nb '#1e1e2e' -nf '#585b70' -sb '#1e1e2e' -sf '#cdd6f4'
 
 # make sxhkd reload its configuration files:
 alt + Escape
